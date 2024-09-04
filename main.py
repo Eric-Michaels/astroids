@@ -46,14 +46,10 @@ def main():
                 print(f"Game over! {kill_count} asteroids destroyed.")
                 sys.exit()
             elif asteroid.collides_with(player) and player.armour >= 1:
-                print(f"Armour is at {player.armour}, health is at {player.health}")
                 player.armour -= 1
-                print(f"Armour is now at {player.armour}, health is at {player.health}")
                 asteroid.kill()
             elif asteroid.collides_with(player) and player.health > 0:
-                print(f"Armour is at {player.armour}, health is at {player.health}")
                 player.health -= 50
-                print(f"Armour is now at {player.armour}, health is at {player.health}")
                 asteroid.kill()
                 if player.health <= 0:
                     print(f"Game over! {kill_count} asteroids destroyed.")
