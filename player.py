@@ -9,6 +9,8 @@ class Player(CircleShape):
         super().__init__(x, y, PLAYER_RADIUS)
         self.rotation = 0
         self.shoot_timer = 0
+        self.health = PLAYER_BASE_HEALTH
+        self.armour = PLAYER_BASE_ARMOUR
 
     def draw(self, screen):
         pygame.draw.polygon(screen, "white", self.triangle(), 2)
